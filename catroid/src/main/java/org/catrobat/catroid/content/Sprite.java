@@ -291,6 +291,11 @@ public class Sprite implements Serializable, Cloneable {
 	}
 
 	private void putBroadcastSequenceAction(String broadcastMessage, SequenceAction action) {
+		int messageSeparatorIndex = broadcastMessage.indexOf('<');
+		if(name.contains(broadcastMessage.substring(0, messageSeparatorIndex))) {
+			String messageTail = broadcastMessage.substring(messageSeparatorIndex);
+			broadcastMessage = name + messageTail;
+		}
 		String sceneName = ProjectManager.getInstance().getSceneToPlay().getName();
 		List<SequenceAction> actions = new ArrayList<>();
 		actions.add(action);
