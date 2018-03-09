@@ -173,6 +173,29 @@
                 }
               },
               {
+                "bricktype": "org.catrobat.catroid.physics.content.bricks.SetForceBrick",
+                "properties": {
+                  "formulaMap": {
+                    "PHYSICS_FORCE_Y": {
+                      "formulaTree": {
+                        "rightChild": {
+                          "type": "NUMBER",
+                          "value": "10.0"
+                        },
+                        "type": "OPERATOR",
+                        "value": "MINUS"
+                      }
+                    },
+                    "PHYSICS_FORCE_X": {
+                      "formulaTree": {
+                        "type": "NUMBER",
+                        "value": "0.0"
+                      }
+                    }
+                  }
+                }
+              },
+              {
                 "bricktype": "org.catrobat.catroid.physics.content.bricks.TurnRightSpeedBrick",
                 "properties": {
                   "formulaMap": {
@@ -929,6 +952,29 @@
                     }
                   },
                   "PHYSICS_GRAVITY_X": {
+                    "formulaTree": {
+                      "type": "NUMBER",
+                      "value": "0.0"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "bricktype": "org.catrobat.catroid.physics.content.bricks.SetForceBrick",
+              "properties": {
+                "formulaMap": {
+                  "PHYSICS_FORCE_Y": {
+                    "formulaTree": {
+                      "rightChild": {
+                        "type": "NUMBER",
+                        "value": "10.0"
+                      },
+                      "type": "OPERATOR",
+                      "value": "MINUS"
+                    }
+                  },
+                  "PHYSICS_FORCE_X": {
                     "formulaTree": {
                       "type": "NUMBER",
                       "value": "0.0"

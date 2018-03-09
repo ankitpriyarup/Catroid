@@ -183,6 +183,7 @@ import org.catrobat.catroid.physics.content.bricks.CollisionReceiverBrick;
 import org.catrobat.catroid.physics.content.bricks.SetBounceBrick;
 import org.catrobat.catroid.physics.content.bricks.SetFrictionBrick;
 import org.catrobat.catroid.physics.content.bricks.SetGravityBrick;
+import org.catrobat.catroid.physics.content.bricks.SetForceBrick;
 import org.catrobat.catroid.physics.content.bricks.SetMassBrick;
 import org.catrobat.catroid.physics.content.bricks.SetPhysicsObjectTypeBrick;
 import org.catrobat.catroid.physics.content.bricks.SetVelocityBrick;
@@ -357,6 +358,7 @@ public class CategoryBricksFactory {
 		motionBrickList.add(new TurnLeftSpeedBrick(BrickValues.PHYSIC_TURN_DEGREES));
 		motionBrickList.add(new TurnRightSpeedBrick(BrickValues.PHYSIC_TURN_DEGREES));
 		motionBrickList.add(new SetGravityBrick(BrickValues.PHYSIC_GRAVITY));
+		motionBrickList.add(new SetForceBrick(BrickValues.PHYSIC_FORCE));
 		motionBrickList.add(new SetMassBrick(BrickValues.PHYSIC_MASS));
 		motionBrickList.add(new SetBounceBrick(BrickValues.PHYSIC_BOUNCE_FACTOR * 100));
 		motionBrickList.add(new SetFrictionBrick(BrickValues.PHYSIC_FRICTION * 100));

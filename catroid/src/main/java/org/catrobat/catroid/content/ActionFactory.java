@@ -858,6 +858,10 @@ public class ActionFactory extends Actions {
 		throw new RuntimeException("No physics action available in non-physics sprite!");
 	}
 
+	public Action createSetForceAction(Sprite sprite, Formula forceX, Formula forceY) {
+		throw new RuntimeException("No physics action available in non-physics sprite!");
+	}
+
 	public Action createSetFrictionAction(Sprite sprite, Formula friction) {
 		throw new RuntimeException("No physics action available in non-physics sprite!");
 	}

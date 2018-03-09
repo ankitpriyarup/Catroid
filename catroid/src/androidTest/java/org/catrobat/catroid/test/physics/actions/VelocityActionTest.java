@@ -57,7 +57,7 @@ public class VelocityActionTest extends PhysicsBaseTest {
 		assertEquals("Unexpected initial y-velocity", POSITIVE_Y_TEST_VELOCITY, physicsObject.getVelocity().y,
 				TestUtils.DELTA);
 
-		physicsWorld.setGravity(0.0f, 0.0f);
+		physicsWorld.setForce(0.0f, 0.0f);
 
 		skipWorldStabilizingSteps();
 
@@ -94,7 +94,7 @@ public class VelocityActionTest extends PhysicsBaseTest {
 		assertEquals("Unexpected initial y-velocity", NEGATIVE_Y_TEST_VELOCITY, physicsObject.getVelocity().y,
 				TestUtils.DELTA);
 
-		physicsWorld.setGravity(0.0f, 0.0f);
+		physicsWorld.setForce(0.0f, 0.0f);
 
 		skipWorldStabilizingSteps();
 
@@ -131,7 +131,7 @@ public class VelocityActionTest extends PhysicsBaseTest {
 				TestUtils.DELTA);
 		assertEquals("Unexpected initial y-velocity", 0.0f, physicsObject.getVelocity().y, TestUtils.DELTA);
 
-		physicsWorld.setGravity(0.0f, 0.0f);
+		physicsWorld.setForce(0.0f, 0.0f);
 
 		skipWorldStabilizingSteps();
 
@@ -168,7 +168,7 @@ public class VelocityActionTest extends PhysicsBaseTest {
 				TestUtils.DELTA);
 		assertEquals("Unexpected initial y-velocity", 0.0f, physicsObject.getVelocity().y, TestUtils.DELTA);
 
-		physicsWorld.setGravity(0.0f, 0.0f);
+		physicsWorld.setForce(0.0f, 0.0f);
 
 		skipWorldStabilizingSteps();
 

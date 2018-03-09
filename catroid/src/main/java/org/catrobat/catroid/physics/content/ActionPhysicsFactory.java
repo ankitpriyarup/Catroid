@@ -36,6 +36,7 @@ import org.catrobat.catroid.physics.PhysicsWorld;
 import org.catrobat.catroid.physics.content.actions.GlideToPhysicsAction;
 import org.catrobat.catroid.physics.content.actions.IfOnEdgeBouncePhysicsAction;
 import org.catrobat.catroid.physics.content.actions.SetBounceFactorAction;
+import org.catrobat.catroid.physics.content.actions.SetForceAction;
 import org.catrobat.catroid.physics.content.actions.SetFrictionAction;
 import org.catrobat.catroid.physics.content.actions.SetGravityAction;
 import org.catrobat.catroid.physics.content.actions.SetMassAction;
@@ -98,6 +99,15 @@ public class ActionPhysicsFactory extends ActionFactory {
 		action.setSprite(sprite);
 		action.setPhysicsWorld(getPhysicsWorld());
 		action.setGravity(gravityX, gravityY);
+		return action;
+	}
+
+	@Override
+	public Action createSetForceAction(Sprite sprite, Formula forceX, Formula forceY) {
+		SetForceAction action = Actions.action(SetForceAction.class);
+		action.setSprite(sprite);
+		action.setPhysicsObject(getPhysicsObject(sprite));
+		action.setForce(forceX, forceY);
 		return action;
 	}
 

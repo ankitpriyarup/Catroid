@@ -49,6 +49,7 @@ public final class BrickValues {
 	public static final Float PHYSIC_BOUNCE_FACTOR = PhysicsObject.DEFAULT_BOUNCE_FACTOR;
 	public static final Float PHYSIC_FRICTION = PhysicsObject.DEFAULT_FRICTION;
 	public static final Vector2 PHYSIC_GRAVITY = PhysicsWorld.DEFAULT_GRAVITY;
+	public static final Vector2 PHYSIC_FORCE = PhysicsWorld.DEFAULT_NULL;
 	public static final Vector2 PHYSIC_VELOCITY = new Vector2();
 	public static final Float PHYSIC_TURN_DEGREES = TURN_DEGREES;
 

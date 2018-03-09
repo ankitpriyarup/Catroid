@@ -158,6 +158,7 @@ import org.catrobat.catroid.physics.content.bricks.CollisionReceiverBrick;
 import org.catrobat.catroid.physics.content.bricks.SetBounceBrick;
 import org.catrobat.catroid.physics.content.bricks.SetFrictionBrick;
 import org.catrobat.catroid.physics.content.bricks.SetGravityBrick;
+import org.catrobat.catroid.physics.content.bricks.SetForceBrick;
 import org.catrobat.catroid.physics.content.bricks.SetMassBrick;
 import org.catrobat.catroid.physics.content.bricks.SetPhysicsObjectTypeBrick;
 import org.catrobat.catroid.physics.content.bricks.SetVelocityBrick;
@@ -641,6 +642,11 @@ public class BackwardCompatibleCatrobatLanguageXStream extends XStream {
 		brickInfo.addBrickFieldToMap("gravityX", BrickField.PHYSICS_GRAVITY_X);
 		brickInfo.addBrickFieldToMap("gravityY", BrickField.PHYSICS_GRAVITY_Y);
 		brickInfoMap.put("setGravityBrick", brickInfo);
+
+		brickInfo = new BrickInfo(SetForceBrick.class.getSimpleName());
+		brickInfo.addBrickFieldToMap("forceX", BrickField.PHYSICS_FORCE_X);
+		brickInfo.addBrickFieldToMap("forceY", BrickField.PHYSICS_FORCE_Y);
+		brickInfoMap.put("setForceBrick", brickInfo);
 
 		brickInfo = new BrickInfo(SetMassBrick.class.getSimpleName());
 		brickInfo.addBrickFieldToMap("mass", BrickField.PHYSICS_MASS);

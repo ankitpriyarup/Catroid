@@ -219,6 +219,7 @@ import org.catrobat.catroid.physics.content.bricks.CollisionReceiverBrick;
 import org.catrobat.catroid.physics.content.bricks.SetBounceBrick;
 import org.catrobat.catroid.physics.content.bricks.SetFrictionBrick;
 import org.catrobat.catroid.physics.content.bricks.SetGravityBrick;
+import org.catrobat.catroid.physics.content.bricks.SetForceBrick;
 import org.catrobat.catroid.physics.content.bricks.SetMassBrick;
 import org.catrobat.catroid.physics.content.bricks.SetPhysicsObjectTypeBrick;
 import org.catrobat.catroid.physics.content.bricks.SetVelocityBrick;
@@ -530,6 +531,7 @@ public final class StorageHandler {
 		xstream.alias("brick", SetBounceBrick.class);
 		xstream.alias("brick", SetFrictionBrick.class);
 		xstream.alias("brick", SetGravityBrick.class);
+		xstream.alias("brick", SetForceBrick.class);
 		xstream.alias("brick", SetMassBrick.class);
 		xstream.alias("brick", SetPhysicsObjectTypeBrick.class);
 		xstream.alias("brick", SetVelocityBrick.class);

@@ -60,7 +60,7 @@ public class GravityActionTest extends PhysicsBaseTest {
 		simulate();
 		float velocityByDefaultGravity = Math.abs(physicsObject.getVelocity().y);
 		resetPhysicObject();
-		physicsWorld.setGravity(0.0f, PhysicsWorld.DEFAULT_GRAVITY.y * 2);
+		physicsWorld.setForce(0.0f, PhysicsWorld.DEFAULT_GRAVITY.y * 2);
 		simulate();
 		float velocityByDuplexGravity = Math.abs(physicsObject.getVelocity().y);
 		assertTrue("velocity by stronger gravity(" + velocityByDuplexGravity + ") is lower than velocity by default-gravity (" + velocityByDefaultGravity + "), should be higher!", velocityByDuplexGravity > velocityByDefaultGravity);

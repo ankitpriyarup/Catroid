@@ -95,7 +95,7 @@ public class PhysicsWorldTest extends AndroidTestCase {
 		assertEquals("Wrong initialization", PhysicsWorld.DEFAULT_GRAVITY, world.getGravity());
 
 		Vector2 newGravity = new Vector2(-1.2f, 3.4f);
-		physicsWorld.setGravity(newGravity.x, newGravity.y);
+		physicsWorld.setForce(newGravity.x, newGravity.y);
 
 		assertEquals("Did not update gravity", newGravity, world.getGravity());
 	}
@@ -146,7 +146,7 @@ public class PhysicsWorldTest extends AndroidTestCase {
 
 		Vector2 velocity = new Vector2(2.3f, 4.5f);
 		float rotationSpeed = 45.0f;
-		physicsWorld.setGravity(0.0f, 0.0f);
+		physicsWorld.setForce(0.0f, 0.0f);
 
 		assertEquals("Physics object has a wrong start position", new Vector2(), physicsObject.getPosition());
 

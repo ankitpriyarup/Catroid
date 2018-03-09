@@ -67,6 +67,7 @@ public class PhysicsWorld {
 	public static final int POSITION_ITERATIONS = 3;
 
 	public static final Vector2 DEFAULT_GRAVITY = new Vector2(0.0f, -10.0f);
+	public static final Vector2 DEFAULT_NULL = new Vector2(0.0f, 0.0f);
 	public static final boolean IGNORE_SLEEPING_OBJECTS = false;
 	public static Vector2 activeArea;
 
@@ -129,7 +130,8 @@ public class PhysicsWorld {
 		renderer.render(world, perspectiveMatrix.scl(PhysicsWorld.RATIO));
 	}
 
-	public void setGravity(float x, float y) {
+	public void setForce(float x, float y) {
+
 		world.setGravity(new Vector2(x, y));
 	}
 

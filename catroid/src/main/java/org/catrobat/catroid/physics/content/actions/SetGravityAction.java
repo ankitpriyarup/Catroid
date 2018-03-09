@@ -54,7 +54,7 @@ public class SetGravityAction extends TemporalAction {
 			Log.d(getClass().getSimpleName(), "Formula interpretation for this specific Brick failed.", interpretationException);
 			return;
 		}
-		physicsWorld.setGravity(newGravityX, newGravityY);
+		physicsWorld.setForce(newGravityX, newGravityY);
 	}
 
 	public void setSprite(Sprite sprite) {
