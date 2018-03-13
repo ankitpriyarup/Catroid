@@ -22,7 +22,6 @@
  */
 package org.catrobat.catroid.physics.content.actions;
 
-import android.os.Handler;
 import android.util.Log;
 
 import com.badlogic.gdx.math.Vector2;
@@ -33,6 +32,7 @@ import org.catrobat.catroid.formulaeditor.Formula;
 import org.catrobat.catroid.formulaeditor.InterpretationException;
 import org.catrobat.catroid.physics.PhysicsObject;
 
+import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -42,9 +42,13 @@ public class SetForceAction extends TemporalAction {
 	private PhysicsObject physicsObject;
 	private Formula forceX;
 	private Formula forceY;
+	private static Timer lastTimer;
 
 	@Override
 	protected void update(float percent) {
+		cancelLastForce();
+		physicsObject.setVelocity(0, 0);
+
 		final Float newForceX;
 		try {
 			newForceX = forceX == null ? Float.valueOf(0f) : forceX.interpretFloat(sprite);
@@ -61,22 +65,22 @@ public class SetForceAction extends TemporalAction {
 		}
 
 		final float mass = physicsObject.getMass();
+		lastTimer = new Timer();
 
 		try {
-			Timer timer = new Timer();
 			TimerTask timerTask = new TimerTask() {
 				@Override
 				public void run() {
 					Vector2 instantaneousVelocity = physicsObject.getVelocity();
-					physicsObject.setVelocity(instantaneousVelocity.x + (newForceX/mass), instantaneousVelocity.y +
-							(newForceY/mass));
+					physicsObject.setVelocity(instantaneousVelocity.x + (newForceX / mass), instantaneousVelocity.y +
+							(newForceY / mass));
+					System.out.println(physicsObject.getVelocity());
 				}
 			};
-			timer.schedule(timerTask, 1000, 1000);
+			lastTimer.schedule(timerTask, 0, 1000);
 		} catch (IllegalStateException e){
 			android.util.Log.i("Force Action", "resume error");
 		}
-
 	}
 
 	public void setSprite(Sprite sprite) {
@@ -90,5 +94,13 @@ public class SetForceAction extends TemporalAction {
 	public void setForce(Formula forceX, Formula forceY) {
 		this.forceX = forceX;
 		this.forceY = forceY;
+	}
+
+	public static void cancelLastForce()
+	{
+		if(lastTimer != null) {
+			lastTimer.cancel();
+			lastTimer.purge();
+		}
 	}
 }

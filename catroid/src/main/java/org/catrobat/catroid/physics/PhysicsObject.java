@@ -239,15 +239,6 @@ public class PhysicsObject {
 		return PhysicsWorldConverter.convertBox2dToNormalVector(body.getLinearVelocity());
 	}
 
-	public void setForce(float x, float y) {
-		body.setLinearVelocity(PhysicsWorldConverter.convertNormalToBox2dCoordinate(x),
-				PhysicsWorldConverter.convertNormalToBox2dCoordinate(y));
-	}
-
-	public void setForce(Vector2 velocity) {
-		setVelocity(velocity.x, velocity.y);
-	}
-
 	public float getMass() {
 		return this.mass;
 	}

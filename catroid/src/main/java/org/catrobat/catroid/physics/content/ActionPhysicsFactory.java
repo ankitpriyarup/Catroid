@@ -45,6 +45,8 @@ import org.catrobat.catroid.physics.content.actions.SetVelocityAction;
 import org.catrobat.catroid.physics.content.actions.TurnLeftSpeedAction;
 import org.catrobat.catroid.physics.content.actions.TurnRightSpeedAction;
 
+import java.util.Timer;
+
 public class ActionPhysicsFactory extends ActionFactory {
 
 	private PhysicsObject getPhysicsObject(Sprite sprite) {

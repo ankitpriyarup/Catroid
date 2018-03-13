@@ -35,6 +35,7 @@ import org.catrobat.catroid.ProjectManager;
 import org.catrobat.catroid.R;
 import org.catrobat.catroid.cast.CastManager;
 import org.catrobat.catroid.content.Sprite;
+import org.catrobat.catroid.physics.content.actions.SetForceAction;
 import org.catrobat.catroid.stage.StageActivity;
 import org.catrobat.catroid.stage.StageListener;
 import org.catrobat.catroid.utils.ToastUtil;
@@ -181,6 +182,7 @@ public class StageDialog extends Dialog implements View.OnClickListener {
 			sprite.getBroadcastSequenceMap().clear();
 			sprite.getBroadcastWaitSequenceMap().clear();
 			sprite.getBroadcastWaitSequenceMap().clearCurrentBroadcastEvent();
+			SetForceAction.cancelLastForce();
 		}
 	}
 
