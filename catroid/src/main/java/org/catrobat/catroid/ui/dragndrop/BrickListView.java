@@ -42,6 +42,7 @@ import android.widget.ListView;
 
 import org.catrobat.catroid.R;
 import org.catrobat.catroid.common.ScreenValues;
+import org.catrobat.catroid.content.bricks.BrickViewProvider;
 import org.catrobat.catroid.ui.adapter.BrickAdapter;
 import org.catrobat.catroid.utils.Utils;
 
@@ -112,7 +113,6 @@ public class BrickListView extends ListView implements OnLongClickListener {
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-
 		int x = (int) event.getX();
 		int y = (int) event.getY();
 
@@ -183,6 +183,7 @@ public class BrickListView extends ListView implements OnLongClickListener {
 
 	@Override
 	public boolean onLongClick(View view) {
+
 		if (((BrickAdapter) getAdapter()).getActionMode() != BrickAdapter.ActionModeEnum.NO_ACTION) {
 			return true;
 		}

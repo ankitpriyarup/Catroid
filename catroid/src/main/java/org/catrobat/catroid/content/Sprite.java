@@ -54,6 +54,7 @@ import org.catrobat.catroid.formulaeditor.Formula;
 import org.catrobat.catroid.formulaeditor.InterpretationException;
 import org.catrobat.catroid.formulaeditor.UserVariable;
 import org.catrobat.catroid.formulaeditor.datacontainer.DataContainer;
+import org.catrobat.catroid.io.SoundManager;
 import org.catrobat.catroid.io.XStreamFieldKeyOrder;
 import org.catrobat.catroid.physics.PhysicsLook;
 import org.catrobat.catroid.physics.PhysicsWorld;
@@ -100,6 +101,7 @@ public class Sprite implements Serializable, Cloneable {
 	private transient ActionFactory actionFactory = new ActionFactory();
 	public transient boolean isClone = false;
 	private transient boolean isMobile = false;
+	private transient float volume = 100.0f;
 
 	public Sprite(String name) {
 		this.name = name;
@@ -590,6 +592,14 @@ public class Sprite implements Serializable, Cloneable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public float getVolume() {
+		return volume;
+	}
+
+	public void setVolume(float volume) {
+		this.volume = volume;
 	}
 
 	public void addScript(Script script) {

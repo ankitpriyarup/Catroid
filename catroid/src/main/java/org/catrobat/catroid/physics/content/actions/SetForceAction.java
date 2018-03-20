@@ -74,7 +74,6 @@ public class SetForceAction extends TemporalAction {
 					Vector2 instantaneousVelocity = physicsObject.getVelocity();
 					physicsObject.setVelocity(instantaneousVelocity.x + (newForceX / mass), instantaneousVelocity.y +
 							(newForceY / mass));
-					System.out.println(physicsObject.getVelocity());
 				}
 			};
 			lastTimer.schedule(timerTask, 0, 1000);
