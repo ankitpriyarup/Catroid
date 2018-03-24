@@ -40,7 +40,6 @@ public class SetVolumeToAction extends TemporalAction {
 	protected void update(float percent) {
 		try {
 			Float newVolume = volume == null ? Float.valueOf(0f) : volume.interpretFloat(sprite);
-			SoundManager.getInstance().setVolume(newVolume);
 			sprite.setVolume(newVolume);
 		} catch (InterpretationException interpretationException) {
 			Log.d(getClass().getSimpleName(), "Formula interpretation for this specific Brick failed.", interpretationException);

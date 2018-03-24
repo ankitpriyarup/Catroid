@@ -121,6 +121,7 @@ import org.catrobat.catroid.content.bricks.SetBackgroundAndWaitBrick;
 import org.catrobat.catroid.content.bricks.SetBackgroundBrick;
 import org.catrobat.catroid.content.bricks.SetBrightnessBrick;
 import org.catrobat.catroid.content.bricks.SetColorBrick;
+import org.catrobat.catroid.content.bricks.SetGlobalVolumeToBrick;
 import org.catrobat.catroid.content.bricks.SetLookBrick;
 import org.catrobat.catroid.content.bricks.SetPenSizeBrick;
 import org.catrobat.catroid.content.bricks.SetRotationStyleBrick;
@@ -472,6 +473,12 @@ public class BrickValueParameterTest {
 		checkIfBrickShowsText(SetVolumeToBrick.class, R.string.brick_set_volume_to);
 		checkIfBrickShowsText(SetVolumeToBrick.class, R.string.percent_symbol);
 		checkIfBrickShowsEditTextWithText(SetVolumeToBrick.class, R.id.brick_set_volume_to_edit_text, "60.0");
+
+		//set global volume to - edit text "60%"
+		//TODO-Add string to resource
+		checkIfBrickShowsText(SetGlobalVolumeToBrick.class, "Set global volume to");
+		checkIfBrickShowsText(SetGlobalVolumeToBrick.class, R.string.percent_symbol);
+		checkIfBrickShowsEditTextWithText(SetGlobalVolumeToBrick.class, R.id.brick_set_volume_to_edit_text, "60.0");
 
 		//change volume by - edit text "-10.0"
 		checkIfBrickShowsText(ChangeVolumeByNBrick.class, R.string.brick_change_volume_by);

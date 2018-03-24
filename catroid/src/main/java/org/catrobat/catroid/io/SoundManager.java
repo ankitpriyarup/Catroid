@@ -34,6 +34,7 @@ import java.util.List;
  */
 public class SoundManager {
 	public static final int MAX_MEDIA_PLAYERS = 7;
+	public static float globalVolume = 70.0f;
 
 	private static final String TAG = SoundManager.class.getSimpleName();
 	private static final SoundManager INSTANCE = new SoundManager();

@@ -31,7 +31,7 @@ import org.catrobat.catroid.formulaeditor.Formula;
 import org.catrobat.catroid.formulaeditor.InterpretationException;
 import org.catrobat.catroid.io.SoundManager;
 
-public class ChangeVolumeByNAction extends TemporalAction {
+public class SetGlobalVolumeToAction extends TemporalAction {
 
 	private Formula volume;
 	private Sprite sprite;
@@ -40,17 +40,17 @@ public class ChangeVolumeByNAction extends TemporalAction {
 	protected void update(float percent) {
 		try {
 			Float newVolume = volume == null ? Float.valueOf(0f) : volume.interpretFloat(sprite);
-			sprite.setVolume(sprite.getVolume() + newVolume);
+			SoundManager.globalVolume = newVolume;
 		} catch (InterpretationException interpretationException) {
 			Log.d(getClass().getSimpleName(), "Formula interpretation for this specific Brick failed.", interpretationException);
 		}
 	}
 
-	public void setVolume(Formula volume) {
-		this.volume = volume;
-	}
-
 	public void setSprite(Sprite sprite) {
 		this.sprite = sprite;
+	}
+
+	public void setVolume(Formula volume) {
+		this.volume = volume;
 	}
 }

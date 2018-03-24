@@ -125,6 +125,7 @@ import org.catrobat.catroid.content.actions.SceneStartAction;
 import org.catrobat.catroid.content.actions.SceneTransitionAction;
 import org.catrobat.catroid.content.actions.SetBrightnessAction;
 import org.catrobat.catroid.content.actions.SetColorAction;
+import org.catrobat.catroid.content.actions.SetGlobalVolumeToAction;
 import org.catrobat.catroid.content.actions.SetLookAction;
 import org.catrobat.catroid.content.actions.SetLookByIndexAction;
 import org.catrobat.catroid.content.actions.SetNfcTagAction;
@@ -625,6 +626,13 @@ public class ActionFactory extends Actions {
 
 	public Action createSetVolumeToAction(Sprite sprite, Formula volume) {
 		SetVolumeToAction action = Actions.action(SetVolumeToAction.class);
+		action.setVolume(volume);
+		action.setSprite(sprite);
+		return action;
+	}
+
+	public Action createSetGlobalVolumeToAction(Sprite sprite, Formula volume) {
+		SetGlobalVolumeToAction action = Actions.action(SetGlobalVolumeToAction.class);
 		action.setVolume(volume);
 		action.setSprite(sprite);
 		return action;

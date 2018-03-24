@@ -138,6 +138,7 @@ import org.catrobat.catroid.content.bricks.SetBackgroundByIndexAndWaitBrick;
 import org.catrobat.catroid.content.bricks.SetBackgroundByIndexBrick;
 import org.catrobat.catroid.content.bricks.SetBrightnessBrick;
 import org.catrobat.catroid.content.bricks.SetColorBrick;
+import org.catrobat.catroid.content.bricks.SetGlobalVolumeToBrick;
 import org.catrobat.catroid.content.bricks.SetLookBrick;
 import org.catrobat.catroid.content.bricks.SetLookByIndexBrick;
 import org.catrobat.catroid.content.bricks.SetNfcTagBrick;
@@ -380,6 +381,7 @@ public class CategoryBricksFactory {
 		soundBrickList.add(new PlaySoundAndWaitBrick());
 		soundBrickList.add(new StopAllSoundsBrick());
 		soundBrickList.add(new SetVolumeToBrick(BrickValues.SET_VOLUME_TO));
+		soundBrickList.add(new SetGlobalVolumeToBrick(BrickValues.SET_GLOBAL_VOLUME_TO));
 
 		// workaround to set a negative default value for a Brick
 		float positiveDefaultValueChangeVolumeBy = Math.abs(BrickValues.CHANGE_VOLUME_BY);

@@ -75,6 +75,7 @@ public final class BrickValues {
 	//constants Sounds
 	public static final Float SET_VOLUME_TO = 60f;
 	public static final Float CHANGE_VOLUME_BY = -10f;
+	public static final Float SET_GLOBAL_VOLUME_TO = 60f;
 
 	//Constants Control
 	public static final int WAIT = 1000;

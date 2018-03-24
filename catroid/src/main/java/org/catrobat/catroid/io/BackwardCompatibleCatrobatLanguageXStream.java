@@ -122,6 +122,7 @@ import org.catrobat.catroid.content.bricks.SetBackgroundAndWaitBrick;
 import org.catrobat.catroid.content.bricks.SetBackgroundBrick;
 import org.catrobat.catroid.content.bricks.SetBrightnessBrick;
 import org.catrobat.catroid.content.bricks.SetColorBrick;
+import org.catrobat.catroid.content.bricks.SetGlobalVolumeToBrick;
 import org.catrobat.catroid.content.bricks.SetLookBrick;
 import org.catrobat.catroid.content.bricks.SetNfcTagBrick;
 import org.catrobat.catroid.content.bricks.SetPenColorBrick;
@@ -468,6 +469,10 @@ public class BackwardCompatibleCatrobatLanguageXStream extends XStream {
 		brickInfo = new BrickInfo(SetVolumeToBrick.class.getSimpleName());
 		brickInfo.addBrickFieldToMap("volume", BrickField.VOLUME);
 		brickInfoMap.put("setVolumeToBrick", brickInfo);
+
+		brickInfo = new BrickInfo(SetGlobalVolumeToBrick.class.getSimpleName());
+		brickInfo.addBrickFieldToMap("volume", BrickField.GLOBAL_VOLUME);
+		brickInfoMap.put("setGlobalVolumeToBrick", brickInfo);
 
 		brickInfo = new BrickInfo(SetXBrick.class.getSimpleName());
 		brickInfo.addBrickFieldToMap("xPosition", BrickField.X_POSITION);

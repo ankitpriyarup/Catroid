@@ -171,6 +171,7 @@ import org.catrobat.catroid.content.bricks.SetBackgroundByIndexAndWaitBrick;
 import org.catrobat.catroid.content.bricks.SetBackgroundByIndexBrick;
 import org.catrobat.catroid.content.bricks.SetBrightnessBrick;
 import org.catrobat.catroid.content.bricks.SetColorBrick;
+import org.catrobat.catroid.content.bricks.SetGlobalVolumeToBrick;
 import org.catrobat.catroid.content.bricks.SetLookBrick;
 import org.catrobat.catroid.content.bricks.SetLookByIndexBrick;
 import org.catrobat.catroid.content.bricks.SetNfcTagBrick;
@@ -456,6 +457,7 @@ public final class StorageHandler {
 		xstream.alias("brick", SetSizeToBrick.class);
 		xstream.alias("brick", SetVariableBrick.class);
 		xstream.alias("brick", SetVolumeToBrick.class);
+		xstream.alias("brick", SetGlobalVolumeToBrick.class);
 		xstream.alias("brick", SetXBrick.class);
 		xstream.alias("brick", SetYBrick.class);
 		xstream.alias("brick", ShowBrick.class);

@@ -747,6 +747,19 @@
                 }
               },
               {
+                "bricktype": "org.catrobat.catroid.content.bricks.SetGlobalVolumeToBrick",
+                "properties": {
+                  "formulaMap": {
+                    "VOLUME": {
+                      "formulaTree": {
+                        "type": "NUMBER",
+                        "value": "60.0"
+                      }
+                    }
+                  }
+                }
+              },
+              {
                 "bricktype": "org.catrobat.catroid.content.bricks.SpeakBrick",
                 "properties": {
                   "formulaMap": {
@@ -1523,6 +1536,19 @@
             },
             {
               "bricktype": "org.catrobat.catroid.content.bricks.SetVolumeToBrick",
+              "properties": {
+                "formulaMap": {
+                  "VOLUME": {
+                    "formulaTree": {
+                      "type": "NUMBER",
+                      "value": "60.0"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "bricktype": "org.catrobat.catroid.content.bricks.SetGlobalVolumeToBrick",
               "properties": {
                 "formulaMap": {
                   "VOLUME": {

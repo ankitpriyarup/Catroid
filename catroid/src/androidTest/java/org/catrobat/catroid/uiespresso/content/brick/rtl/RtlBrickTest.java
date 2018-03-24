@@ -130,6 +130,7 @@ import org.catrobat.catroid.content.bricks.SetBackgroundByIndexAndWaitBrick;
 import org.catrobat.catroid.content.bricks.SetBackgroundByIndexBrick;
 import org.catrobat.catroid.content.bricks.SetBrightnessBrick;
 import org.catrobat.catroid.content.bricks.SetColorBrick;
+import org.catrobat.catroid.content.bricks.SetGlobalVolumeToBrick;
 import org.catrobat.catroid.content.bricks.SetNfcTagBrick;
 import org.catrobat.catroid.content.bricks.SetPenColorBrick;
 import org.catrobat.catroid.content.bricks.SetPenSizeBrick;
@@ -440,6 +441,9 @@ public class RtlBrickTest {
 
 		// Set volume to
 		checkIfBrickISRtl(SetVolumeToBrick.class, R.id.brick_set_volume_to_layout);
+
+		// Set global volume to
+		checkIfBrickISRtl(SetGlobalVolumeToBrick.class, R.id.brick_set_global_volume_to_layout);
 
 		// Change volume by
 		checkIfBrickISRtl(ChangeVolumeByNBrick.class, R.id.brick_change_volume_by_layout);
